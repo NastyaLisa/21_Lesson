@@ -6,9 +6,9 @@ const car = {
   model: "Tesla",
   year: 2022,
   color: "pink",
-  signal() {
-    alert("fa!, fa!");
-  },
+  signal(){
+  alert("fa!, fa!");
+},
 };
 
 car.color = "red";
@@ -25,7 +25,7 @@ const salaries = {
   designer: 8000,
 };
 
-function total(object = {}) {
+function total() {
   let totalSalaries = 0;
   const values = Object.values(salaries);
 
@@ -37,13 +37,15 @@ function total(object = {}) {
 console.log(total());
 
 salaries.manager = 5000;
-delete salaries.designer;
+
 
 console.table(salaries);
 console.log(total());
 
-// task 3
+delete salaries.designer;
+console.log(total());
 
+// Task 3
 function Computer(brand, system, cost) {
   this.brand = brand;
   this.system = system;
@@ -69,13 +71,13 @@ function Computer(brand, system, cost) {
       case "number":
         return this.cost;
       case "default":
-        return this.brand + " " + this.system + " " + this.cost;
+        return this.brand + " " + this.system + " " + this.cost + '//'; 
     }
   };
-}
+};
 let dell2 = new Computer("Dell", "windows", 800);
 let apple2 = new Computer("Apple", "MAC OS", 1700);
-let groupComputer = dell + " " + "//" + " " + apple;
+let groupComputer = dell + apple;
 
 console.log(groupComputer);
 console.log(String(dell2));
